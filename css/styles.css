@@ -496,7 +496,7 @@ address {
 
 @media only screen and (min-width: 1158px) {
   .benefits-text {
-    font-weight: 400px;
+    font-weight: 400;
   }
 }
 
@@ -568,6 +568,7 @@ address {
 .social-list {
   display: flex;
   justify-content: center;
+  flex-direction: row;
   gap: 24px;
 }
 .social-link:active {
@@ -1181,14 +1182,15 @@ input[type='checkbox']:focus-visible
   display: flex;
   flex-direction: column;
   gap: 40px;
-
+}
+.menu-link {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
 }
 
-.menu-link:active,
-.menu-address-link:active {
+.menu-link.current,
+.menu-contacts-link.current {
   color: #404bbf;
 }
 
@@ -1200,9 +1202,6 @@ input[type='checkbox']:focus-visible
   color: #2e2f42;
 }
 
-.active-contact {
-  color: #4d5ae5;
-}
 .menu-contacts:first-child {
   margin-bottom: 24px;
 }
@@ -1211,8 +1210,20 @@ input[type='checkbox']:focus-visible
   margin-bottom: 48px;
 }
 
-.social-list > .social-item {
-  justify-content: space-between;
+.menu-contacts-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+  font-style: normal;
+}
+
+.menu-social-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
   gap: 40px;
 }
 /* #endregion */
